@@ -21,18 +21,19 @@ export default function Home() {
     }
 
     return (
-        <ScrollView style={{ flex: 1, margin: 10 }}>
-            <View>
 
-                <View style={{ borderWidth: 1, borderColor: 'blue', flex: 1, flexDirection: 'row', borderRadius: 8, marginBottom: 10 }}>
-                    <TextInput style={{ flex: 1, padding: 8 }} onChange={onSearchQueryValueChange} placeholder="Ölkənin adını daxil edin..." />
-                    <Button onPress={{}} title="Axtar"></Button>
-                </View>
-                <View style={{ borderWidth: 1, borderColor: 'lightgray', flex: 1, alignItems: 'center', justifyContent: 'center', borderRadius: 8, marginBottom: 10, backgroundColor: 'blue', padding: 10 }}>
-                    <Text style={{ fontSize: 20, color: '#ffffff' }}>
-                        Ölkə sayı: {countries.length}
-                    </Text>
-                </View>
+        <View>
+
+            <View style={{ borderWidth: 1, borderColor: 'blue', flex: 1, flexDirection: 'row', borderRadius: 8, marginBottom: 10 }}>
+                <TextInput style={{ flex: 1, padding: 8 }} onChange={onSearchQueryValueChange} placeholder="Ölkənin adını daxil edin..." />
+                <Button onPress={{}} title="Axtar"></Button>
+            </View>
+            <View style={{ borderWidth: 1, borderColor: 'lightgray', flex: 1, alignItems: 'center', justifyContent: 'center', borderRadius: 8, marginBottom: 10, backgroundColor: 'blue', padding: 10 }}>
+                <Text style={{ fontSize: 20, color: '#ffffff' }}>
+                    Ölkə sayı: {countries.length}
+                </Text>
+            </View>
+            <ScrollView style={{ flex: 1, margin: 10 }}>
                 {
                     countries.map(country => {
                         return (
@@ -55,8 +56,9 @@ export default function Home() {
                         )
                     })
                 }
-            </View>
-        </ScrollView >
+            </ScrollView >
+        </View>
+
     )
 
 }
